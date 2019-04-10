@@ -1,5 +1,5 @@
 # ESP3D-WEBUI 
- [![Build Status](https://travis-ci.org/luc-github/ESP3D-WEBUI.svg?branch==preactbased)](https://travis-ci.org/luc-github/ESP3D-WEBUI)   
+ [![Build Status](https://travis-ci.org/luc-github/ESP3D-WEBUI.svg?branch=preactbased)](https://travis-ci.org/luc-github/ESP3D-WEBUI)   
  Test code for WebUI using Preact per @aganov suggestion
  
  This is mainly a backbone and learning process repository, so do not use it, a new branch will be created when usable.
@@ -12,7 +12,8 @@
 npm install
 ```
 
-### Start dev server on http://localhost:8080
+### Start dev server    
+http://localhost:8080
 
 ```
 npm run start
