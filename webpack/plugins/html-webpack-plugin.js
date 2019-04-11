@@ -8,12 +8,12 @@ import HtmlWebpackPlugin from "html-webpack-plugin"
 const devMode = process.env.NODE_ENV !== "production"
 
 const config = {
-  inlineSource: ".(js|css)$",
-  template: "./src/index.html",
-  filename: "./index.html",
-  minify: true,
-  inject: true,
-  hash: devMode ? true : false
+    inlineSource: ".(js|css)$",
+    template: "./src/index.html",
+    filename: "./index.html",
+    minify: true,
+    inject: true,
+    hash: devMode ? true : false,
 }
 
 export default () => new HtmlWebpackPlugin(config)

@@ -4,13 +4,11 @@ import htmlWebpackPlugin from "./html-webpack-plugin"
 import htmlMinifierWebpackPlugin from "./html-minifier-webpack-plugin"
 import removeFilesWebpackPlugin from "./remove-files-webpack-plugin"
 
-export const environmentPlugins = [
-  htmlWebpackPlugin(),   
-]
+export const environmentPlugins = [htmlWebpackPlugin()]
 
 export const productionPlugins = [
-  htmlWebpackInlineSourcePlugin(),
-  htmlMinifierWebpackPlugin(),
-  compressionPlugin(),
-  removeFilesWebpackPlugin()
+    htmlWebpackInlineSourcePlugin(),
+    htmlMinifierWebpackPlugin(),
+    compressionPlugin(),
+    removeFilesWebpackPlugin(),
 ]

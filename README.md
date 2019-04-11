@@ -24,3 +24,16 @@ npm run start
 ```
 npm run build
 ```
+
+### Code beautify with prettier
+use pluggin or cli   
+
+```
+npm i -G prettier
+```
+
+the config file is .prettierrc  
+a batch is available if you need : prettyfiles.bat, it is just automating the following commands:  
+prettier --config .prettierrc --write "{src/**/,webpack/**/}*.js"
+prettier --config .prettierrc --write src/**/*.html"
+

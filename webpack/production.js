@@ -3,5 +3,5 @@ import environment from "./environment"
 import { productionPlugins } from "./plugins"
 
 module.exports = merge(environment, {
-	plugins: productionPlugins
+    plugins: productionPlugins,
 })
