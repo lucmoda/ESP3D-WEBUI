@@ -3,8 +3,13 @@ import htmlWebpackInlineSourcePlugin from "./html-webpack-inline-source-plugin"
 import htmlWebpackPlugin from "./html-webpack-plugin"
 import htmlMinifierWebpackPlugin from "./html-minifier-webpack-plugin"
 import removeFilesWebpackPlugin from "./remove-files-webpack-plugin"
+import terserPlugin from "./terser-plugin"
 
 export const environmentPlugins = [htmlWebpackPlugin()]
+
+export const optimizationPlugins = {
+    minimizer: [terserPlugin()],
+}
 
 export const productionPlugins = [
     htmlWebpackInlineSourcePlugin(),

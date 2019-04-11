@@ -1,7 +1,8 @@
 import merge from "webpack-merge"
 import environment from "./environment"
-import { productionPlugins } from "./plugins"
+import { productionPlugins, optimizationPlugins } from "./plugins"
 
 module.exports = merge(environment, {
+    optimization: optimizationPlugins,
     plugins: productionPlugins,
 })
