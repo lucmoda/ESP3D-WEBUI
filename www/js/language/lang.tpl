@@ -142,6 +142,7 @@ var langtrans = {
 "Modem":"Modem",
 "STA":"STA",
 "AP":"AP",
+"BT":"Bluetooth",
 "Baud Rate":"Baud Rate",
 "Sleep Mode":"Sleep Mode",
 "Web Port":"Web Port",
@@ -237,6 +238,7 @@ var langtrans = {
 "Log out":"Log out",
 "Password":"Password",
 "No SD Card":"No SD Card",
+"Not SD printing":"Not SD printing",
 "Check for Update":"Check for Update",
 "Please use 8.3 filename only.":"Please use 8.3 filename only.",
 "Preferences":"Preferences",
@@ -420,5 +422,6 @@ var langtrans = {
 "Z Acceleration, mm/sec^2":"Z Acceleration, mm/sec^2",
 "X Max travel, mm":"X Max travel, mm",
 "Y Max travel, mm":"Y Max travel, mm",
-"Z Max travel, mm":"Z Max travel, mm"
+"Z Max travel, mm":"Z Max travel, mm",
+"File extensions (use ; to separate):":"File extensions (use ; to separate):"
 };
