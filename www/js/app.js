@@ -280,6 +280,7 @@ function Disable_interface(lostconnection) {
     //No auto check
     on_autocheck_position(false);
     on_autocheck_temperature(false); 
+    on_autocheck_PrintProgress(false);
     on_autocheck_status(false); 
     if(async_webcommunication) {
 		event_source.removeEventListener('ActiveID', ActiveID_events, false);
@@ -294,6 +295,9 @@ function Disable_interface(lostconnection) {
 function update_UI_firmware_target() {
     var fwName;
     initpreferences();
+    document.getElementById('control_x_position_label').innerHTML="X";
+    document.getElementById('control_y_position_label').innerHTML="Y";
+    document.getElementById('control_z_position_label').innerHTML="Z";
     document.getElementById('config_smoothie_nav').style.display = 'none';
     if (target_firmware == "repetier" ) {
         fwName = "Repetier";
@@ -307,6 +311,7 @@ function update_UI_firmware_target() {
         document.getElementById('zero_x_btn').style.display = 'none';
         document.getElementById('zero_y_btn').style.display = 'none';
         document.getElementById('zero_z_btn').style.display = 'none';
+        //document.getElementById('control_zm_position_display').style.display = 'none';
         }
     else if (target_firmware == "repetier4davinci" ) {
         fwName = "Repetier for Davinci";
@@ -320,6 +325,7 @@ function update_UI_firmware_target() {
         document.getElementById('zero_x_btn').style.display = 'none';
         document.getElementById('zero_y_btn').style.display = 'none';
         document.getElementById('zero_z_btn').style.display = 'none';
+        //document.getElementById('control_zm_position_display').style.display = 'none';
         }
     else if (target_firmware == "smoothieware" ) {
         fwName = "Smoothieware";
@@ -334,9 +340,11 @@ function update_UI_firmware_target() {
         document.getElementById('zero_x_btn').style.display = 'none';
         document.getElementById('zero_y_btn').style.display = 'none';
         document.getElementById('zero_z_btn').style.display = 'none';
+        //document.getElementById('control_zm_position_display').style.display = 'none';
         }
     else if (target_firmware == "grbl-embedded" ) {
         fwName = "GRBL ESP32";
+        last_grbl_pos ="";
         document.getElementById('configtablink').style.display = 'block';
         document.getElementById('auto_check_control').style.display = 'none';
         document.getElementById('progress_btn').style.display = 'none';
@@ -352,6 +360,9 @@ function update_UI_firmware_target() {
         document.getElementById('grblPanel').style.display = 'flex';
         document.getElementById('FW_github').href = 'https://github.com/bdring/Grbl_Esp32';
         document.getElementById('settings_filters').style.display = 'none';
+        document.getElementById('control_x_position_label').innerHTML="Xw";
+        document.getElementById('control_y_position_label').innerHTML="Yw";
+        document.getElementById('control_z_position_label').innerHTML="Zw";
         
         }
     else if (target_firmware == "marlin-embedded" ) {
@@ -368,6 +379,7 @@ function update_UI_firmware_target() {
         document.getElementById('grblPanel').style.display = 'none';
         document.getElementById('FW_github').href = 'https://github.com/MarlinFirmware/Marlin';
         document.getElementById('settings_filters').style.display = 'none';
+        //document.getElementById('control_zm_position_display').style.display = 'none';
         }
     else if (target_firmware == "marlin" ) {
         fwName = "Marlin";
@@ -381,6 +393,7 @@ function update_UI_firmware_target() {
         document.getElementById('zero_y_btn').style.display = 'none';
         document.getElementById('zero_z_btn').style.display = 'none';
         document.getElementById('grblPanel').style.display = 'none';
+        //document.getElementById('control_zm_position_display').style.display = 'none';
         }
     else if (target_firmware == "marlinkimbra" ) {
         fwName = "Marlin Kimbra";
@@ -394,6 +407,7 @@ function update_UI_firmware_target() {
         document.getElementById('zero_y_btn').style.display = 'none';
         document.getElementById('zero_z_btn').style.display = 'none';
         document.getElementById('grblPanel').style.display = 'none';
+        //document.getElementById('control_zm_position_display').style.display = 'none';
         }
     else if (target_firmware == "grbl" ) {
         fwName = "Grbl";
@@ -410,6 +424,9 @@ function update_UI_firmware_target() {
         document.getElementById('zero_y_btn').style.display = 'block';
         document.getElementById('zero_z_btn').style.display = 'block';
         document.getElementById('grblPanel').style.display = 'flex';
+        document.getElementById('control_x_position_label').innerHTML="Xw";
+        document.getElementById('control_y_position_label').innerHTML="Yw";
+        document.getElementById('control_z_position_label').innerHTML="Zw";
         //todo extruders temperature panel + temperatures filters
         }
     else {
@@ -424,7 +441,11 @@ function update_UI_firmware_target() {
         EP_STA_IP_VALUE = "STA_IP";
         EP_STA_GW_VALUE = "STA_GW";
         EP_STA_MK_VALUE = "STA_MK";
-        EP_WIFI_MODE = "WIFI_MODE";
+        if (target_firmware == "grbl-embedded"){
+            EP_WIFI_MODE = "RADIO_MODE";
+        } else {
+            EP_WIFI_MODE = "WIFI_MODE";
+        }
         EP_AP_SSID = "AP_SSID";
         EP_AP_PASSWORD = "AP_PWD";
         EP_AP_IP_VALUE = "AP_IP";
