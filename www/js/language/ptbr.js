@@ -237,6 +237,7 @@ var ptbrtrans = {
 "Log out":"Sair",
 "Password":"Senha",
 "No SD Card":"Sem Cart&atilde;o SD",
+"Not SD printing":"Na&ccedil;o imprimindo por SD",
 "Check for Update":"Checa por Atualiza&ccedil;&atilde;o",
 "Please use 8.3 filename only.":"Use somente nome de arquivos 8.3.",
 "Preferences":"Prefer&ecirc;ncias",
