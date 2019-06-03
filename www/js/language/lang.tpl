@@ -142,6 +142,7 @@ var langtrans = {
 "Modem":"Modem",
 "STA":"STA",
 "AP":"AP",
+"BT":"Bluetooth",
 "Baud Rate":"Baud Rate",
 "Sleep Mode":"Sleep Mode",
 "Web Port":"Web Port",
@@ -316,6 +317,13 @@ var langtrans = {
 "Connection monitoring":"Connection monitoring",
 "XY Feedrate value must be at least 1 mm/min!":"XY Feedrate value must be at least 1 mm/min!",
 "Z Feedrate value must be at least 1 mm/min!":"Z Feedrate value must be at least 1 mm/min!",
+"Print Progress": "Print Progress",
+"Please Refresh!":"Please Refresh!",
+"Value of auto-check must be between 0s and 300s !!":"Value of auto-check must be between 0s and 300s !!",
+"No File is currently Printing from the SD Card":"No File is currently Printing from the SD Card",
+"Unknown Response: ":"Unknown Response: ",
+"Show Print Progress panel":"Show Print Progress panel",
+"Print Progress Refresh Time":"Print Progress Refresh Time",
 "Hold:0":"Hold complete. Ready to resume.",
 "Hold:1":"Hold in-progress. Reset will throw an alarm.",
 "Door:0":"Door closed. Ready to resume.",
@@ -420,5 +428,6 @@ var langtrans = {
 "Z Acceleration, mm/sec^2":"Z Acceleration, mm/sec^2",
 "X Max travel, mm":"X Max travel, mm",
 "Y Max travel, mm":"Y Max travel, mm",
-"Z Max travel, mm":"Z Max travel, mm"
+"Z Max travel, mm":"Z Max travel, mm",
+"File extensions (use ; to separate):":"File extensions (use ; to separate):"
 };
