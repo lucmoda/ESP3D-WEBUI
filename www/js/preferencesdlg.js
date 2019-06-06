@@ -57,7 +57,7 @@ if ((target_firmware == "grbl-embedded" ) || (target_firmware == "grbl" )){
                                             \"enable_grbl_panel\":\"true\",\
                                             \"interval_positions\":\"3\",\
                                             \"interval_temperatures\":\"3\",\
-																						\"interval_printProgress\":\"10\",\
+					    \"interval_printProgress\":\"10\",\
                                             \"interval_status\":\"3\",\
                                             \"xy_feedrate\":\"1000\",\
                                             \"z_feedrate\":\"100\",\
