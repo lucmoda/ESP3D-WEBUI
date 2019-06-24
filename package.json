@@ -19,6 +19,10 @@
     "gulp-replace": "latest",
     "gulp-smoosher": "latest",
     "gulp-uglify": "latest",
+<<<<<<< HEAD
+=======
+    "gulp-util": "latest",
+>>>>>>> 31a795922646ba51de2f9d322468fe24d88b81c1
     "gulp-zip": "latest",
     "jshint": "latest",
     "merge-stream": "latest"
