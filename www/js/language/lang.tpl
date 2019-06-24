@@ -142,6 +142,7 @@ var langtrans = {
 "Modem":"Modem",
 "STA":"STA",
 "AP":"AP",
+"BT":"Bluetooth",
 "Baud Rate":"Baud Rate",
 "Sleep Mode":"Sleep Mode",
 "Web Port":"Web Port",
@@ -420,5 +421,6 @@ var langtrans = {
 "Z Acceleration, mm/sec^2":"Z Acceleration, mm/sec^2",
 "X Max travel, mm":"X Max travel, mm",
 "Y Max travel, mm":"Y Max travel, mm",
-"Z Max travel, mm":"Z Max travel, mm"
+"Z Max travel, mm":"Z Max travel, mm",
+"File extensions (use ; to separate):":"File extensions (use ; to separate):"
 };
